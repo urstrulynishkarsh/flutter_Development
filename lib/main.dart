@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:secondapp/home_page.dart';
+import 'package:secondapp/screens/home_page.dart';
+import 'package:secondapp/screens/login_page.dart';
 
 void main() {
   runApp(Myapp());
@@ -16,7 +17,22 @@ class Myapp extends StatelessWidget {
     // var day = "wednesday";
     // const pi = 3.14;
     return MaterialApp(
-      home: HomePage(),
+      // home: HomePage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.green),
+
+      //this is used for changing color of the appbar
+
+      // themeMode: ThemeMode.light,
+      // darkTheme: ThemeData(
+      //   brightness: Brightness.dark,
+      // using for theme colors in application
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => LoginPage(),
+        "/home": (context) => HomePage(),
+        "/login": (context) => LoginPage(),
+      },
     );
   }
 }
