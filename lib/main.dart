@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:secondapp/screens/home_page.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'package:secondapp/screens/login_page.dart';
 
 void main() {
@@ -19,7 +20,10 @@ class Myapp extends StatelessWidget {
     return MaterialApp(
       // home: HomePage(),
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.green),
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        // fontFamily: GoogleFonts
+      ),
 
       //this is used for changing color of the appbar
 
@@ -27,7 +31,7 @@ class Myapp extends StatelessWidget {
       // darkTheme: ThemeData(
       //   brightness: Brightness.dark,
       // using for theme colors in application
-      initialRoute: "/home",
+      // initialRoute: "/home",
       routes: {
         "/": (context) => LoginPage(),
         "/home": (context) => HomePage(),
